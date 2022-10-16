@@ -1,7 +1,6 @@
 # PA5_Part2
-PA5 Part2 Starter Files
 
-Starter files for UCSD CSE30 PA5 Part1 Fall 2022.
+Starter files for UCSD CSE30 PA5 Part2 Fall 2022.
 
 After you do a git clone, do the following
 
