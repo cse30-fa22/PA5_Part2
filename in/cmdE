@@ -1,2 +1,0 @@
-#!/bin/bash
-./extract -c3 "-i::" 1 2 3
