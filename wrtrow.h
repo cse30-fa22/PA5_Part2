@@ -1,8 +1,5 @@
 /* 
- * Header file for PA4
- * Author: Keith Muller
- * the next two lines are called header guards
- * we will cover this later in the quarter
+ * Header file for PA5
  */
 #ifndef WRTROW_H
 #define WRTROW_H
