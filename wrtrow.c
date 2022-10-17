@@ -25,4 +25,3 @@ wr_row(char **ptab, int *coltab, int outcols, char outdelim)
      * last column has a \n as the trailing delimiter
      */
 }
-}
