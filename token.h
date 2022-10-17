@@ -1,7 +1,5 @@
 /* 
  * Header file for PA5
- * the next two lines are called header guards
- * we will cover this later in the quarter
  */
 #ifndef TOKEN_H
 #define TOKEN_H
