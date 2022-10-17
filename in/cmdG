@@ -1,0 +1,2 @@
+#!/bin/bash
+./extract -c3s "-o:" 1 2 3

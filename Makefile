@@ -4,7 +4,7 @@ all:    $(PROG)
 
 # Tell make about the file dependencies
 HEAD	= token.h
-OBJ     = token.o main.o
+OBJ     = token.o main.o wrtrow.o
 
 # special libraries This can be blank
 LIB     =
@@ -25,28 +25,60 @@ $(PROG):	$(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) $(LIB) -o $@
 
 #Specify the test number to test at a time
+
+LISTMAIN = A B C D E F G
+LISTVALG = V
 LIST1    = 1 2 
 LIST2    = 3 4 
 LIST3    = 5 
 LIST4    = 6 7 
+LIST5    = 8 9 10 
+LIST6    = 11 12 
 
-.PHONY: clean alltest testA testB testC testD
+.PHONY: clean alltest testmain testA testB testC testD testE testF testV
 
-alltest:    testA testB testC testD
+alltest:   testmain testA testB testC testD testE testF testV
+
+testmain:   $(PROG)
+	@echo
+	@echo "****** starting $@ *******"
+	-./runtest $(LISTMAIN)
 
 testA:      $(PROG)
-	-./runtest -c3 $(LIST1)
+	@echo
+	@echo "****** starting $@ *******"
+	-./runtest $(LIST1)
 
 testB:      $(PROG)
-	-./runtest -c4 $(LIST2)
+	@echo
+	@echo "****** starting $@ *******"
+	-./runtest $(LIST2)
 
 testC:      $(PROG)
-	-./runtest -c43 $(LIST3)
+	@echo
+	@echo "****** starting $@ *******"
+	-./runtest $(LIST3)
 
 testD:      $(PROG)
-	-./runtest -c3 $(LIST4)
+	@echo
+	@echo "****** starting $@ *******"
+	-./runtest $(LIST4)
+
+testE:      $(PROG)
+	@echo
+	@echo "****** starting $@ *******"
+	-./runtest $(LIST5)
+
+testF:      $(PROG)
+	@echo
+	@echo "****** starting $@ *******"
+	-./runtest $(LIST6)
+
+testV:      $(PROG)
+	@echo
+	@echo "****** starting $@ *******"
+	-./runtest $(LISTVALG)
 
 # remove binaries
 clean:
 	rm -f $(OBJ) $(PROG)
-

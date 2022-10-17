@@ -1,0 +1,1 @@
+Usage: ./extract -c count [-i inputdelim] [-o outputdelim] col [..]
