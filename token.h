@@ -1,6 +1,5 @@
 /* 
- * Header file for PA4
- * Author: Keith Muller
+ * Header file for PA5
  * the next two lines are called header guards
  * we will cover this later in the quarter
  */
