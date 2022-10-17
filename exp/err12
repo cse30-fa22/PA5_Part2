@@ -1,0 +1,14 @@
+./extract: drop line 1, too many columns
+./extract: drop line 2, too many columns
+./extract: drop line 3, too many columns
+./extract: drop line 4, too many columns
+./extract: drop line 5, too many columns
+./extract: drop line 6, too many columns
+./extract: drop line 7, too many columns
+./extract: drop line 8, too many columns
+./extract: drop line 9, too many columns
+./extract: drop line 10, too many columns
+./extract: drop line 11, too many columns
+./extract: drop line 12, too many columns
+./extract: drop line 13, too many columns
+./extract: 13 records input, 13 dropped
