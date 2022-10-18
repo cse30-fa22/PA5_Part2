@@ -135,7 +135,7 @@ main(int argc, char **argv)
         if (token(buf, indelim, incols, ptable, linecnt, *argv) != 0)
             dropcnt++;        /* count the dropped rows */
         else
-           wr_row(ptable, coltab, outcols, outdelim);
+           wrtrow(ptable, coltab, outcols, outdelim);
     }
 
     /*

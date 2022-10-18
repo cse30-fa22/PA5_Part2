@@ -2,7 +2,7 @@
 #include "wrtrow.h"
 
 /*
- * wr_row
+ * wrtrow
  *
  * usage:   given an array of pointers to columns and an array of columns to
  *          ouput and a count of output columns
@@ -15,8 +15,7 @@
  *  outdelim the output field delimiter to use
  */
 void
-wr_row(char **ptab, int *coltab, int outcols, char outdelim)
-        
+wrtrow(char **ptab, int *coltab, int outcols, char outdelim)
 {
     /*
      * PA5part2 action: delete this comment
