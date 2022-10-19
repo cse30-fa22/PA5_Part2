@@ -78,9 +78,8 @@ main(int argc, char **argv)
     }
 
     /*
-     * check that we saw the -c flag (cols > 0)
+     * check that we saw the -c flag (cols > 0) if not use the following error message
      */
-
     /* PA5 action: delete this comment and complete this section
      * use the following error message and return with EXIT_FAILURE 
      * fprintf(stderr,
@@ -88,7 +87,8 @@ main(int argc, char **argv)
      */
 
     /*
-     * make sure there is at least one output column specified
+     * make sure there is at least one output column specified, outcols
+     * calculates the number of output columns
      */
     if ((outcols = argc - optind) <= 0) {
         fprintf(stderr,"%s: at least one output column required\n", *argv);
@@ -115,8 +115,8 @@ main(int argc, char **argv)
 
     /*
      * fill in the index table
-     * and check that the columns specified are valid
-     * 1 or greater and less than equal to incols)
+     * and check that each of columns specified is valid
+     * (each must be 1 or greater and less than equal to incols)
      */
     /* PA5 action: delete this comment and complete this section
      * use the following error message and return with EXIT_FAILURE 
@@ -128,7 +128,7 @@ main(int argc, char **argv)
      * selected columns
      * getline() does a malloc() for you of the correct sized buffer and puts
      * the address in buf and the size of the allocated buffer in bufsz
-     * do not forget to free buff before you exit.
+     * do not forget to free the space in buf before you exit.
      */
     while (getline(&buf, &bufsz, stdin) > 0) {
         linecnt++;
@@ -143,7 +143,7 @@ main(int argc, char **argv)
     }
 
     /*
-     * free buffers include the one allocated by getline
+     * free buffers include the one allocated by getline in buf
      * to keep valgrind happy
      */
     /* PA5 action: delete this comment and complete this section */
