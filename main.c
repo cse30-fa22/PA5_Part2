@@ -78,7 +78,7 @@ main(int argc, char **argv)
     }
 
     /*
-     * check that we saw the -c flag (cols > 0) if not use the following error message
+     * check that we saw the -c flag (cols >= MINCOL) if not use the following error message
      */
     /* PA5 action: delete this comment and complete this section
      * use the following error message and return with EXIT_FAILURE 
