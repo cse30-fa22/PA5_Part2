@@ -78,7 +78,7 @@ main(int argc, char **argv)
     }
 
     /*
-     * check that we saw the -c flag
+     * check that we saw the -c flag (cols > 0)
      */
 
     /* PA5 action: delete this comment and complete this section
@@ -88,7 +88,7 @@ main(int argc, char **argv)
      */
 
     /*
-     * make sure there is at least one output colmn specified
+     * make sure there is at least one output column specified
      */
     if ((outcols = argc - optind) <= 0) {
         fprintf(stderr,"%s: at least one output column required\n", *argv);
@@ -96,7 +96,7 @@ main(int argc, char **argv)
     }
 
     /*
-     * allocate space for the input pointer table using incols
+     * allocate space for input pointer table using incols to size the array
      * if unable to allocate, return with EXIT_FAILURE
      */
     /* PA5 action: delete this comment and complete this section
@@ -106,7 +106,7 @@ main(int argc, char **argv)
 
     /*
      * allocate space for the output table, an array of index offsets
-     * into ptable using outcols
+     * into ptable using outcols to size the array
      */
     /* PA5 action: delete this comment and complete this section
      * use the following error message and return with EXIT_FAILURE 
