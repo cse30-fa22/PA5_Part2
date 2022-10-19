@@ -17,7 +17,8 @@ main(int argc, char **argv)
 {
     char **ptable;              /* array of pointers to column starts */
     int  *coltab;               /* array of column indexes to print */
-    char buf[BUFSZ];            /* input buffer */       
+    char *buf = NULL;           /* input buffer, getline() will allocate it */
+    size_t bufsz = 0;           /* size of buffer altered by getline()*/
     unsigned long linecnt = 0;  /* input line counter */
     unsigned long dropcnt = 0;  /* number of input lines dropped counter */
     int incols = 0;             /* number of columns in the input */
@@ -125,8 +126,11 @@ main(int argc, char **argv)
     /*
      * read the input one line at a time, break into tokens and write out the
      * selected columns
+     * getline() does a malloc() for you of the correct sized buffer and puts
+     * the address in buf and the size of the allocated buffer in bufsz
+     * do not forget to free buff before you exit.
      */
-    while (fgets(buf, BUFSZ, stdin)  != NULL) {
+    while (getline(&buf, &bufsz, stdin) > 0) {
         linecnt++;
 
         /*
@@ -139,7 +143,8 @@ main(int argc, char **argv)
     }
 
     /*
-     * free buffers to keep valgrind happy
+     * free buffers include the one allocated by getline
+     * to keep valgrind happy
      */
     /* PA5 action: delete this comment and complete this section */
 
