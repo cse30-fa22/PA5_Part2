@@ -116,7 +116,12 @@ main(int argc, char **argv)
     /*
      * fill in the index table
      * and check that each of columns specified is valid
-     * (each must be 1 or greater and less than equal to incols)
+     * (each must be MINCOL or greater and less than equal to incols)
+     * getopt() places the index value of the argument after the last flag 
+     * in the variable optind. The index of the last argument is in argc-1
+     * so write a loop that takes each parameter from argv + optind to
+     * the last argument. In the loop use strtol() to convert the string column
+     * number to an integer and store it in order to the array coltab.
      */
     /* PA5 action: delete this comment and complete this section
      * use the following error message and return with EXIT_FAILURE 
