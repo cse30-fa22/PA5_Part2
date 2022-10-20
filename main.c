@@ -96,6 +96,16 @@ main(int argc, char **argv)
     }
 
     /*
+     * fill in the index table
+     * and check that each of columns specified is valid
+     * (each must be 1 or greater and less than equal to incols)
+     */
+    /* PA5 action: delete this comment and complete this section
+     * use the following error message and return with EXIT_FAILURE 
+     * fprintf(stderr, "%s: improper output column value\n", *argv);
+     */
+    
+    /*
      * allocate space for input pointer table using incols to size the array
      * if unable to allocate, return with EXIT_FAILURE
      */
@@ -111,16 +121,6 @@ main(int argc, char **argv)
     /* PA5 action: delete this comment and complete this section
      * use the following error message and return with EXIT_FAILURE 
      * fprintf(stderr, "%s: malloc() failed output index table\n", *argv);
-     */
-
-    /*
-     * fill in the index table
-     * and check that each of columns specified is valid
-     * (each must be 1 or greater and less than equal to incols)
-     */
-    /* PA5 action: delete this comment and complete this section
-     * use the following error message and return with EXIT_FAILURE 
-     * fprintf(stderr, "%s: improper output column value\n", *argv);
      */
 
     /*
