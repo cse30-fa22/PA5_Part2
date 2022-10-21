@@ -40,7 +40,7 @@ main(int argc, char **argv)
         switch (opt) {
         case 'c':
             /*
-             * number of columns in dsv file must be greater than MINCOL
+             * number of columns in dsv file must be >= MINCOL
              */
 
              /* PA5 action: delete this comment and complete this section
@@ -78,7 +78,8 @@ main(int argc, char **argv)
     }
 
     /*
-     * check that we saw the -c flag (cols >= MINCOL) if not use the following error message
+     * make sure we have the required -c flag (cols >= MINCOL) if not use the following 
+     * error message
      */
     /* PA5 action: delete this comment and complete this section
      * use the following error message and return with EXIT_FAILURE 
