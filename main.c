@@ -78,7 +78,7 @@ main(int argc, char **argv)
     }
 
     /*
-     * make sure we have the required -c flag (cols >= MINCOL) if not use the following 
+     * make sure we have the required -c flag if not use the following 
      * error message
      */
     /* PA5 action: delete this comment and complete this section
