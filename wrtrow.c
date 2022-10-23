@@ -20,7 +20,7 @@ wrtrow(char **ptable, int *coltab, int outcols, char outdelim)
     /*
      * PA5part2 action: delete this comment
      * Hint
-     * print all the columns execept the last one with a trailing delimiter
+     * print all the columns except the last one with a trailing delimiter
      * last column has a \n as the trailing delimiter
      */
 }
