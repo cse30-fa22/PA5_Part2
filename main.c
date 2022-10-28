@@ -23,7 +23,7 @@ main(int argc, char **argv)
     unsigned long dropcnt = 0;  /* number of input lines dropped counter */
     int incols = 0;             /* number of columns in the input */
     int outcols = 0;            /* number of columns in the output */
-    char *ptr;                  /* pointer for use by strtoul() */
+    char *ptr;                  /* pointer for use by strtol() */
     int opt;                    /* option flag returns by getopt */
     char indelim = INDELIM;     /* input delimter set to default */
     char outdelim = OUTDELIM;   /* ouput delimter set to default */
