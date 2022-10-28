@@ -54,6 +54,7 @@ main(int argc, char **argv)
              */
              /* PA5 action: delete this comment and complete this section
               * use the following error message and return with EXIT_FAILURE
+              * if it is not a single char or is a " or a \n
               * fprintf(stderr, "%s: -i operand must be a single char\n", *argv);
               */
             break;
@@ -63,6 +64,7 @@ main(int argc, char **argv)
              */
              /* PA5 action: delete this comment and complete this section
               * use the following error message and return with EXIT_FAILURE
+              * if it is not a single char or is a " or a \n
               * fprintf(stderr, "%s: -o operand must be a single char\n", *argv);
               */
             break;
